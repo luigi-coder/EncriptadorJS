@@ -111,3 +111,8 @@ button{
 /* footer{
     margin-bottom: -100px;
 } */
+
+.encriptado{
+    background-color: red;
+    font-size: 0.3em;
+}
