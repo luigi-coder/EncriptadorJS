@@ -1,0 +1,2 @@
+#evitar la carpera de node_modules
+**/node_modules

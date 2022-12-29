@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/media_queries.css">
+    <link rel="stylesheet" href="/css/encriptador.css">
+    <link rel="stylesheet" href="/css/desencriptador.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <img src="assets/img/logo alura.svg" alt="">
+    </header>
+    <main>
+        <div>
+            <section>
+                <textarea 
+                id="introducir-texto" 
+                class="textarea" 
+                type="mensaje" 
+                cols="50" 
+                rows="10" 
+                placeholder="Ingrese el texto aquí"></textarea>
+            </section>
+            <section class="card">
+                <img src="assets/img/Muñeco.svg" alt="">
+                
+                <p class="p1">Ningún mensaje fue encontrado</p>
+                <p class="p2">Ingrese un texto que deseas encriptar o desencriptar</p>
+                
+            </section>
+        </div>
+        <section class="content_card2">
+            <div class="card2">
+                <div class="content_img_card2">
+                    <div class="content_img">
+                        <img src="/assets/img/Muñeco.svg" alt="">
+                    </div>
+                    <div class="content_text">
+                        <p class="p1 text-center">Ningún mensaje fue encontrado</p>
+                        <p class="p2 text-center">Ingrese un texto que deseas encriptar o desencriptar</p>
+                    </div>
+                </div>
+               
+            </div>
+        </section>
+        <section class="btns">
+            <div class="icons">
+                <i class="bi bi-exclamation-circle-fill px-1"></i>
+                <p>Solo letras minúsculas y sin acentos</p>
+            </div>
+            <div class="BTN">
+                <button id="encriptar" class="boton">Encriptar</button>
+                <button id="desencriptar" class="boton">Desencriptar</button>
+            </div>
+        </section>
+    </main>
+
+    
+    <!-- <footer class="text-center">
+        <p>© 2022 Alura. Todos los derechos reservados - Luis Salinas.</p>
+    </footer> -->
+
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
