@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/media_queries.css">
     <title>Document</title>
@@ -33,7 +34,7 @@
                 
             </section>
         </div>
-        <section class="content_card2">
+        <section id="card2" class="content_card2">
             <div class="card2">
                 <div class="content_img_card2">
                     <div class="content_img">
@@ -53,8 +54,8 @@
                 <p>Solo letras minúsculas y sin acentos</p>
             </div>
             <div class="BTN">
-                <button id="encriptar" class="boton">Encriptar</button>
-                <button id="desencriptar" class="boton">Desencriptar</button>
+                <button id="encriptar" class="encriptar">Encriptar</button>
+                <button id="desencriptar" class="desencriptar">Desencriptar</button>
             </div>
         </section>
     </main>
@@ -65,6 +66,7 @@
     </footer> -->
 
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="js/encriptar.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="js/encriptador.js" type="module" ></script>
 </body>
 </html>
