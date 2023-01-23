@@ -462,6 +462,7 @@
         margin-top: 20px;
         margin-left: 50px;
         font-size: 1em;
+        background-color: red;
     }
 
     main .content_card2 {
@@ -486,7 +487,7 @@
 
     /*++++++*/
     .content_img img {
-        width: 250px;
+        width: 200px;
         padding: 30px;
     }
 
@@ -525,10 +526,10 @@
         align-items: center;
         flex-direction: row;
         margin-left: -15px;
+        font-size: 0.7em;
     }
 
     main .btns div button {
-        font-size: 1em;
         width: 150px;
     }
 }
