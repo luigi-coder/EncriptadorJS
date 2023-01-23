@@ -1,33 +1,35 @@
+const d = document;
+
+
+
 function capTextEncrip() {
 
-    const encriptador = document.getElementById("encriptar");
+    const encriptador = d.getElementById("encriptar");
     encriptador.addEventListener("click", () => {
     
-        const texto = document.getElementById("introducir-texto").value;
+        const texto = d.getElementById("introducir-texto").value;
         
         validacion(texto);
     
-        document.getElementById("introducir-texto").value = "";
+        d.getElementById("introducir-texto").value = "";
     });
 
-    console.log(encriptador); 
+    console.log(encriptador);
     return encriptador;
 }
 
 capTextEncrip();
 
-
-
 function capTextDesencrip(){
 
-    const desencriptador = document.getElementById("desencriptar");
+    const desencriptador = d.getElementById("desencriptar");
     desencriptador.addEventListener("click", () => {
         
-        const texto = document.getElementById("introducir-texto").value;
+        const texto = d.getElementById("introducir-texto").value;
     
         desencriptar(texto);
         
-        document.getElementById("introducir-texto").value = "";
+        d.getElementById("introducir-texto").value = "";
     });
 }
 
@@ -44,7 +46,7 @@ function validacion(texto){
            }
         }
         return 0;
-    }
+     }
 
 
     switch(true) {
@@ -78,7 +80,7 @@ function encriptar(texto){
         return String.fromCharCode(letra.charCodeAt(0) + 1);
     }).join("");
 
-    const encriptador = document.getElementById("encriptar");
+    const encriptador = d.getElementById("encriptar");
     
     encriptador.classList.remove("encriptar");
     encriptador.classList.add("boton");
@@ -90,16 +92,16 @@ function encriptar(texto){
 function mostrarTexto(textoEncriptado){
     
     
-    const card = document.getElementById("card");
-    const card2 = document.getElementById("card2");
+    const card = d.getElementById("card");
+    const card2 = d.getElementById("card2");
     
     card.innerHTML = "";
     card2.innerHTML = "";
 
-    const p = document.createElement("p");
+    const p = d.createElement("p");
     
     // crear un bton para copiar el texto
-    const boton = document.createElement("button");
+    const boton = d.createElement("button");
     boton.classList.add("btnCopyDesHabilitado");
     boton.innerHTML = "Copiar";
 
@@ -107,17 +109,17 @@ function mostrarTexto(textoEncriptado){
     p.classList.add("p3");
 
     // Creacion de la card2 responsive
-    const div = document.createElement("div");
+    const div = d.createElement("div");
     
     div.classList.add("card2");
     div.style.height = "300px";
 
-    const divDeP = document.createElement("div");
+    const divDeP = d.createElement("div");
     divDeP.style.height = "80%";
     divDeP.style.display = "flex";
 
 
-    const p2 = document.createElement("p");
+    const p2 = d.createElement("p");
     p2.style.wordBreak = "break-all";
     p2.classList.add("p4");
     p2.style.margin = "1em";
@@ -127,14 +129,14 @@ function mostrarTexto(textoEncriptado){
     div.appendChild(divDeP);
 
     // creacion de un segundo div que contendra el boton
-    const div2 = document.createElement("div");
+    const div2 = d.createElement("div");
     div2.style.display = "flex";
     div2.style.justifyContent = "center";
     div2.style.alignItems = "center";
 
 
     // creacion del boton para copiar el texto
-    const boton2 = document.createElement("button");
+    const boton2 = d.createElement("button");
     boton2.style.width = "50%";
     boton2.classList.add("btnCopyDesHabilitado");
     boton2.innerHTML = "Copiar";
@@ -151,6 +153,10 @@ function mostrarTexto(textoEncriptado){
     boton.addEventListener("click", () => {
         copiarTexto(textoEncriptado, boton);
     });  
+
+    boton2.addEventListener("click", () => {
+        copiarTexto(textoEncriptado, boton2);
+    });
 }
 
 function desencriptar(texto){
@@ -159,8 +165,8 @@ function desencriptar(texto){
         return String.fromCharCode(letra.charCodeAt(0) - 1);
     }).join("");
 
-    const desencriptador = document.getElementById("desencriptar");
-    const encriptador = document.getElementById("encriptar");
+    const desencriptador = d.getElementById("desencriptar");
+    const encriptador = d.getElementById("encriptar");
     
     desencriptador.classList.remove("desencriptar");
     desencriptador.classList.add("boton");
@@ -174,7 +180,7 @@ function desencriptar(texto){
 
 function copiarTexto(textoDesencriptado, boton){
 
-    const card = document.getElementById("card");
+    const card = d.getElementById("card");
     console.log(card);
     
     boton.classList.remove("btnCopyDesHabilitado");
@@ -233,4 +239,4 @@ function toastError(mensaje){
         },
         onClick: function(){} // Callback after click
         }).showToast();
-} 
+}
